@@ -125,6 +125,10 @@ func getAllRecipes(c *gin.Context) {
 		c.JSON(http.StatusNotFound, "")
 		return
 	}
+
+	for i := range results {
+		results[i].Name = util.ReplaceUnderscores(results[i].Name)
+	}
 	c.JSON(http.StatusOK, results)
 }
 
