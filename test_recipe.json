@@ -1,0 +1,7 @@
+{
+    "name": "Cast Iron NY Strip Steak",
+    "description": "A delicious charred NY strip steak for two",
+	"category": "Main Course",
+    "ingredients": ["Large strip steak", "TBSP of butter", "Garlic", "Thyme"],
+    "steps": ["Season steak with S&P", "Heat cast iron to smoking hot", "Char one side of steak for 1 minute", "Flip and char other side", "Add garlic, thyme and butter, baste the steak", "Put in oven @ 350 for 5 mintes"]
+}

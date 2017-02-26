@@ -24,7 +24,7 @@ type Recipe struct {
 
 func getRecipe() *Recipe {
 	r := new(Recipe)
-	r.Name = "Grilled Cheese Sandwhich"
+	r.Name = "Grilled Cheese Sandwhich Better one!"
 	r.Description = "Delicious cheese sandwhich loved by all"
 
 	return r
@@ -67,19 +67,18 @@ func main() {
 	r.addStep(Step{"Flip sanwhich over when down side is browned"})
 	r.addStep(Step{"Cook until second side is browned"})
 
-	c := session.DB("test2").C("recipe")
+	c := session.DB("testing").C("recipe")
 	err = c.Insert(*r)
 	if err != nil {
 		fmt.Println(err)
 	}
 
 	result := Recipe{}
-	err = c.Find(bson.M{"name": "Grilled Cheese Sandwhich"}).One(&result)
+	err = c.Find(bson.M{"name": "Grilled Cheese Sandwhich Better one!"}).One(&result)
 	if err != nil {
 		fmt.Println(err)
 	}
 
 	fmt.Println(result)
 	result.debug()
-
 }
